@@ -1,47 +1,52 @@
-# Kanban Board UI
-A simple Kanban Board UI built with React.js, Vite, and DaisyUI. This project focuses on creating a visually appealing interface for task management with columns for Backlog, On Progress, and Done tasks. It includes a modal for adding new tasks using CKEditor 5.
+# Kanban Board Application
+
+A responsive Kanban Board application built with React, featuring drag-and-drop functionality using `react-dnd`, CRUD operations via a JSON server, and a modal for task creation. The project is designed to manage tasks efficiently across different statuses: **Backlog**, **On Progress**, and **Done**.
+
+---
+
 ## Features
-- Kanban Board with three columns:
-    - Backlog
-    - On Progress
-    - Done
-- Task Modal for adding tasks with:
-- Title
-    - Description (using CKEditor 5)
-    - Start Date and End Date
-    - Task Type (Development, Testing, Design)
-- Responsive Design using DaisyUI and TailwindCSS.
-## Technologies Used
-- React.js: For building the user interface.
-- Vite: As the build tool for fast development.
-- DaisyUI: For pre-styled and customizable UI components.
-- TailwindCSS: For utility-first CSS styling.
-- CKEditor 5: For rich text editing in the task description.
-## Installation
-1. Clone the repository:
+
+- 🖱️ **Drag-and-Drop**: Move tasks between columns seamlessly.
+- 📋 **CRUD Operations**:
+  - **Create**: Add new tasks using a modal form.
+  - **Read**: Display tasks grouped by status.
+  - **Delete**: Remove tasks with a single click.
+- 📱 **Responsive Design**: Optimized for desktop and mobile devices.
+- 🌐 **API Integration**: Data persistence with `json-server`.
+
+---
+
+## Tech Stack
+
+### Frontend
+- **React**: Component-based UI development.
+- **react-dnd**: Drag-and-drop functionality with `react-dnd-html5-backend`.
+- **Tailwind CSS**: Styling for a clean, responsive layout.
+
+### Backend
+- **JSON Server**: Mock API for data persistence.
+
+---
+
+## Setup Instructions
+
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/kanban-board-ui.git
-cd kanban-board-ui
-```
-2. Install dependencies:
+git clone https://github.com/<your-username>/kanban-board.git
+cd kanban-board
+
+### 2. Install Dependencies
 ```bash
 npm install
-```
-3. Start the development server:
+
+### 3. Start JSON Server
+```bash
+{
+  "tasks": []
+}
+## Run JSON server:
+
+### 4. Start React Application
 ```bash
 npm run dev
-```
-## Project Structure
-```bash
-src/
-├── components/
-│   ├── AddTaskModal.jsx  // Modal for adding tasks
-│   ├── KanbanColumn.jsx  // Columns for task statuses
-│   ├── Navbar.jsx        // Top navigation bar
-│   ├── TaskCard.jsx      // Individual task cards
-├── App.jsx               // Main application component
-├── main.jsx              // Entry point for the app
-```
-## Future Enhancements
-- Drag-and-Drop Support: Allow tasks to be moved between columns.
-- API Integration: Connect the board to a backend service for persistent storage.
+
